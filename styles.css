@@ -1,0 +1,80 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+a {
+    text-decoration: none; /* This removes the underline */
+}
+
+h1 {
+    font-size: 36px;
+    font-family: 'Caveat';
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 32px;
+    font-family: 'Caveat';
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.main {
+    background-image: url('assets/background.jpg');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+}
+
+.whitebox {
+    top: 10%;
+    left: 10%;
+    width: 40%; /* Size of white box w.r.t entire page */
+    background-color: white;
+    color: black;
+    font-family: 'Abel'; /* Overall font */
+    border-radius: 5px;
+    padding: 2%;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: column; /* Flex elements are stacked vertically */
+}
+
+.title {
+    flex: 1; /* 1/3 of the page */
+}
+
+.text {
+    flex: 2; /* 2/3 of the page */
+}
+
+.row {
+    display: flex;
+}
+
+.circle-image {
+    float: right; /* Aligns the image to the right */
+    width: 200px; /* Adjust size as necessary */
+    height: 200px;
+    border-radius: 50%; /* Makes the image circular */
+    shape-outside: circle(50%); /* Enables text wrapping around a circular shape */
+    margin-left: 20px; /* Space between the image and text */
+    object-fit: cover;
+}
+
+.icon {
+    font-size: 32px; /* Adjust the size of the icons */
+    color: #000;
+}
+
+.icon a:hover {
+    color: #17acde; /* Color when hovering over the icon */
+}
