@@ -37,7 +37,7 @@ h2 {
 .whitebox {
     top: 10%;
     left: 10%;
-    width: 40%; /* Size of white box w.r.t entire page */
+    width: 35%; /* Size of white box w.r.t entire page */
     background-color: white;
     color: black;
     font-family: 'Abel'; /* Overall font */
