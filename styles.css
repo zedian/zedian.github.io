@@ -35,3 +35,8 @@ body {
     word-wrap: break-word;
     overflow: auto;
 }
+
+.icon {
+    font-size: 48px; /* Adjust the size of the icons */
+    color: #000;
+}
