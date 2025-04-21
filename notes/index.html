@@ -1,107 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Notetaking</title>
-<link rel="stylesheet" href="style.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caveat&family=Patrick+Hand&display=swap" rel="stylesheet">
-</head>
-<body>
-<div class="container">
-<div class="notepad">
-<div class="margin-line"></div>
-<div class="content">
-<div class="title-container">
-<h1>Work in progress...</h1>
-<div class="weekday-selector">
-<div class="weekday-circle" data-day="M">M</div>
-<div class="weekday-circle" data-day="T">T</div>
-<div class="weekday-circle" data-day="W">W</div>
-<div class="weekday-circle" data-day="T">T</div>
-<div class="weekday-circle" data-day="F">F</div>
-<div class="weekday-circle" data-day="S">S</div>
-<div class="weekday-circle" data-day="S">S</div>
-</div>
-</div>
-<article class="blog-post">
-<h2>First Blog Post</h2>
-<div class="post-meta">April 20, 2025</div>
-<p>Welcome to my notepad-style blog. This is where I'll be sharing my thoughts and ideas, much like scribbling in an old school notebook.</p>
-<div class="taped-image">
-<div class="tape tape-top-left"></div>
-<div class="tape tape-top-right"></div>
-<img src="/api/placeholder/600/400" alt="Sample image">
-<div class="image-caption">My trip to the mountains last weekend</div>
-</div>
-<p>The design is inspired by vintage school notepads and Japanese stationery, with a warm paper texture and that characteristic margin line on the left.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae justo vel purus facilisis ultricies. Vivamus euismod, ipsum vel tincidunt hendrerit, nunc nisl facilisis enim, sit amet tempor nunc magna vel ex.</p>
-</article>
-<article class="blog-post">
-<h2>Second Blog Post</h2>
-<div class="post-meta">April 15, 2025</div>
-<p>This is another blog post to demonstrate how multiple entries would appear on this notepad-style blog.</p>
-<div class="taped-image right">
-<div class="tape tape-top-left"></div>
-<div class="tape tape-top-right"></div>
-<img src="/api/placeholder/500/300" alt="Another sample image">
-<div class="image-caption">My favorite café downtown</div>
-</div>
-<p>In future updates, I might add more elements to the left side of this notepad, perhaps navigation or profile information.</p>
-</article>
-</div>
-</div>
-</div>
 
-<!-- Add the JavaScript at the end of the body -->
-<script>
-// Wait for the DOM to be fully loaded
-document.addEventListener('DOMContentLoaded', function() {
-    // Get the current date
-    const currentDate = new Date();
-    
-    // Get the current day of the week (0 = Sunday, 1 = Monday, etc.)
-    const currentDayIndex = currentDate.getDay();
-    
-    // Map the day index to our weekday circles
-    // Our circles are in order: M T W T F S S, so we need to convert to our format
-    // Sunday (0) should be the last element (6)
-    const dayMapping = [6, 0, 1, 2, 3, 4, 5]; // Maps JS day index to our circle index
-    
-    // Get all weekday circles
-    const weekdayCircles = document.querySelectorAll('.weekday-circle');
-    
-    // Remove 'selected' class from all circles
-    weekdayCircles.forEach(circle => {
-        circle.classList.remove('selected');
-    });
-    
-    // Add 'selected' class to the current day circle
-    const todayCircleIndex = dayMapping[currentDayIndex];
-    weekdayCircles[todayCircleIndex].classList.add('selected');
-    
-    // Optional: Add click event listeners to make circles selectable by users
-    weekdayCircles.forEach(circle => {
-        circle.addEventListener('click', function() {
-            // Remove selected class from all circles
-            weekdayCircles.forEach(c => {
-                c.classList.remove('selected');
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notetaking</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Patrick+Hand&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="notepad">
+            <div class="margin-line"></div>
+            <div class="content">
+                <div class="title-container">
+                    <h1>Work in progress...</h1>
+                    <div class="weekday-selector">
+                        <div class="weekday-circle" data-day="M">M</div>
+                        <div class="weekday-circle" data-day="T">T</div>
+                        <div class="weekday-circle" data-day="W">W</div>
+                        <div class="weekday-circle" data-day="T">T</div>
+                        <div class="weekday-circle" data-day="F">F</div>
+                        <div class="weekday-circle" data-day="S">S</div>
+                        <div class="weekday-circle" data-day="S">S</div>
+                    </div>
+                </div>
+                <article class="blog-post">
+                    <h2>On building web agents</h2>
+                    <div class="post-meta">April 20, 2025</div>
+                    
+                    <!-- <div class="taped-image">
+                        <div class="tape tape-top-left"></div>
+                        <div class="tape tape-top-right"></div>
+                        <img src="/api/placeholder/600/400" alt="Sample image">
+                        <div class="image-caption">My trip to the mountains last weekend</div>
+                    </div> -->
+                    <!-- <div class="taped-image right">
+                        <div class="tape tape-top-left"></div>
+                        <div class="tape tape-top-right"></div>
+                        <img src="/api/placeholder/500/300" alt="Another sample image">
+                        <div class="image-caption">My favorite café downtown</div>
+                    </div> -->
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add the JavaScript at the end of the body -->
+    <script>
+        // Wait for the DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get the current date
+            const currentDate = new Date();
+
+            // Get the current day of the week (0 = Sunday, 1 = Monday, etc.)
+            const currentDayIndex = currentDate.getDay();
+
+            // Map the day index to our weekday circles
+            // Our circles are in order: M T W T F S S, so we need to convert to our format
+            // Sunday (0) should be the last element (6)
+            const dayMapping = [6, 0, 1, 2, 3, 4, 5]; // Maps JS day index to our circle index
+
+            // Get all weekday circles
+            const weekdayCircles = document.querySelectorAll('.weekday-circle');
+
+            // Remove 'selected' class from all circles
+            weekdayCircles.forEach(circle => {
+                circle.classList.remove('selected');
             });
-            
-            // Add selected class to the clicked circle
-            this.classList.add('selected');
+
+            // Add 'selected' class to the current day circle
+            const todayCircleIndex = dayMapping[currentDayIndex];
+            weekdayCircles[todayCircleIndex].classList.add('selected');
+
+            // Optional: Add click event listeners to make circles selectable by users
+            weekdayCircles.forEach(circle => {
+                circle.addEventListener('click', function () {
+                    // Remove selected class from all circles
+                    weekdayCircles.forEach(c => {
+                        c.classList.remove('selected');
+                    });
+
+                    // Add selected class to the clicked circle
+                    this.classList.add('selected');
+                });
+            });
+
+            // Update the post date to reflect the current date
+            const postMeta = document.querySelector('.post-meta');
+            if (postMeta) {
+                const options = { year: 'numeric', month: 'long', day: 'numeric' };
+                postMeta.textContent = currentDate.toLocaleDateString('en-US', options);
+            }
         });
-    });
-    
-    // Update the post date to reflect the current date
-    const postMeta = document.querySelector('.post-meta');
-    if (postMeta) {
-        const options = { year: 'numeric', month: 'long', day: 'numeric' };
-        postMeta.textContent = currentDate.toLocaleDateString('en-US', options);
-    }
-});
-</script>
+    </script>
 </body>
+
 </html>
